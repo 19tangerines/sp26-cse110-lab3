@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+:root {
+  --main-color: #004170;
+}
+
+* {
+  font-family: "domine", serif;
+}
+
+a[href="https://timeful.app/"] {
+  color: red;
+}
+
+body {
+  background-color: hsl(200, 30%, 95%);
+}
+
+h1, h2 { 
+  text-align: center;
+  color: rgb(0, 65, 112);
+}
+
+h3 {
+  color: color-mix(in srgb, #004170 70%, #2E4052);
+  background-color: hsla(203, 100%, 21%, 0.2);
+  padding: 10px;
+}
+
+.box {
+  border: 2px solid darkblue;
+  padding: 10px;
+}
+
+#branding-images {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+input[type="text"] {
+  border: 2px solid blue;
+}
+
+nav li:hover {
+  background-color: orange;
+}
+
+nav a:hover {
+  color: color(display-p3 0 0.5 1);
+}
+
+button:active {
+  background-color: green;
+}
+
+/* descendant */
+section p {
+  font-size: 1.1em;
+}
+
+/* child */
+nav > ul {
+  background-color: lightblue;
+}
+
+/* adjacent sibling */
+h2 + h3 {
+  color: rgb(65, 7, 1);
+}
+
+/* general sibling */
+h2 ~ p {
+  color: darkgray;
+}
+
+p.box {
+  background-color: rgba(0, 89, 255, 0.163);
+}
+
+section:has(img) {
+  border: 3px dashed orange;
+}
+
+nav {
+  ul {
+    list-style: none;
+  }
+}
+
+/* box model */
+
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header {
+  margin: 20px auto;
+}
+
+section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+nav {
+  padding: 10px 20px;
+}
+
+section {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+span {
+  display: inline;
+}
+
+img {
+  width: 50%; 
+  max-width: 500px;
+  min-width: 50px;
+}
+
+video {
+  height: 300px;
+}
+
+audio {
+  margin-top: 10pt;
+}
+
+footer {
+  padding: 0.5cm;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+footer {
+  position: relative;
+}
+
+/* NAV CONTAINER */
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+nav li {
+  background-color: #4f7087;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  display: block; 
+}
+
+nav li:hover {
+  background-color: #2E4052;
+}
+
+/* flexbox, branding samples */
+#branding-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* turns yellow when screen is small*/
+@media (max-width: 600px) {
+  body {
+    background-color: lightyellow;
+  }
+
+  nav ul {
+    grid-template-columns: 1fr;
+  }
+}
