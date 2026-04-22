@@ -47,7 +47,7 @@ nav li:hover {
 }
 
 nav a:hover {
-  color: color(display-p3 0 0.5 1);
+  color: color(srgb 1 0 0);
 }
 
 button:active {
